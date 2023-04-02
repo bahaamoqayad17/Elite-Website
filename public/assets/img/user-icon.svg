@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.729" height="31.006" viewBox="0 0 26.729 31.006">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8068" data-name="Rectangle 8068" width="26.729" height="31.006" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_154" data-name="Mask Group 154" clip-path="url(#clip-path)">
+    <g id="Iconly_Curved_Profile" data-name="Iconly/Curved/Profile" transform="translate(4.897 3.081)">
+      <g id="Profile" transform="translate(0 0)">
+        <path id="Stroke_1" data-name="Stroke 1" d="M15.589,29.238c-4.641,0-8.605-.722-8.605-3.615s3.939-5.563,8.605-5.563c4.642,0,8.605,2.645,8.605,5.537S20.256,29.238,15.589,29.238Z" transform="translate(-6.984 -5.021)" fill="none" stroke="#b7b7b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.095" fill-rule="evenodd"/>
+        <path id="Stroke_3" data-name="Stroke 3" d="M15.922,14.383a5.5,5.5,0,1,0-.039,0Z" transform="translate(-7.326 -3.352)" fill="none" stroke="#b7b7b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.095" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

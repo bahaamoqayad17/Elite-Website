@@ -1,0 +1,1601 @@
+/* Start Global Styles */
+@font-face {
+    font-family: tajawal;
+    src: url("./../fonts/Tajawal-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Cairo;
+    src: url("./../fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "tajawal";
+}
+
+:root {
+    --mainColor: #009ee3;
+    --gold-foil: #ffcb43;
+}
+
+.scrollable-element {
+    scrollbar-color: var(--mainColor);
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+header {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.button-fill {
+    background-color: var(--mainColor) !important;
+    color: #fff !important;
+    width: 125px;
+    height: 39px;
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+.button-notfill {
+    background-color: transparent;
+    color: var(--mainColor) !important;
+    border: 1px solid var(--mainColor) !important;
+    width: 125px;
+    height: 39px;
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+.button-notfill:hover {
+    background-color: var(--mainColor) !important;
+    color: #fff !important;
+}
+
+.button-fill:hover {
+    background-color: transparent !important;
+    color: var(--mainColor) !important;
+    border: 1px solid var(--mainColor) !important;
+}
+
+.card {
+    box-shadow: #396abf17 1px 1px 20px 20px;
+    border-radius: 20px;
+}
+
+.before::before {
+    content: "|";
+    margin-left: 10px;
+    color: var(--mainColor);
+}
+.line {
+    width: 94px;
+    height: 5px;
+    background: var(--mainColor);
+    margin-top: 10px;
+}
+
+.switch-mode {
+    z-index: 999999;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #868d9b;
+    background: url("https://source.unsplash.com/7Sz71zuuW4k");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bg-fa {
+    background-color: #fafafa;
+}
+
+ul.dashed {
+    list-style-type: none;
+}
+ul.dashed > li {
+    text-indent: -5px;
+}
+ul.dashed > li:before {
+    content: "-";
+}
+
+.login-scroll {
+    background-color: var(--gold-foil) !important;
+    color: #fff !important;
+}
+
+.login-scroll:hover {
+    background-color: var(--gold-foil) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.register-scroll {
+    background-color: #fff !important;
+    color: var(--mainColor) !important;
+}
+
+.register-scroll:hover {
+    background-color: #fff !important;
+    color: var(--mainColor) !important;
+}
+
+.register-image {
+    top: -284px;
+    right: -173px;
+}
+
+.register-image-en {
+    top: -284px;
+    left: -173px;
+}
+
+.blog-image {
+    right: -304px;
+    top: -1122px;
+}
+
+.blog-image-en {
+    left: -76px;
+    top: -852px;
+}
+
+.mb-6 {
+    margin-bottom: 6rem !important;
+}
+
+/* End Global Styles */
+
+/* ------------------------- Start NavBar ---------------------------- */
+nav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--mainColor) !important;
+    transition: all 0.3s ease;
+}
+
+nav .navbar-nav .nav-item .nav-link-down:hover {
+    color: var(--gold-foil) !important;
+    transition: all 0.3s ease;
+}
+
+.active-navbar {
+    color: var(--mainColor) !important;
+}
+
+nav .dropdown .dropdown-toggle::after {
+    display: none;
+}
+nav {
+    transition: all 2s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ------------------------- End NavBar ---------------------------- */
+
+/* ------------------------- Start Landing ---------------------------- */
+
+.landing-page {
+    padding-top: 50px;
+}
+
+.landing-page h1 {
+    font-size: 80px;
+}
+
+.landing-page h2 {
+    font-size: 40px;
+}
+.landing-page .create-bot-btn {
+    background-color: var(--gold-foil);
+    color: #fff !important;
+    border-radius: 10px !important;
+    width: 150px;
+    height: 40px;
+}
+
+.landing-page .content .before::before {
+    content: "|";
+    margin-left: 0;
+    color: var(--mainColor);
+}
+
+.landing-page .content .mb-4 {
+    font-family: "Cairo";
+}
+
+.counts .count {
+    margin-top: 15px;
+    box-shadow: #0000000f 1px 1px 5px 2px;
+    border-bottom: 1px solid var(--gold-foil);
+    width: 350px;
+}
+
+.owl-number {
+    overflow: visible;
+}
+
+.counts .count h1 {
+    font-family: "Poppins";
+    font-size: 70px;
+    color: var(--mainColor);
+}
+
+.counts .count p {
+    font-size: 40px;
+}
+
+.about-us h4 {
+    color: var(--mainColor);
+}
+
+.about-us p {
+    font-family: "Cairo";
+    line-height: 35px;
+}
+
+.landing-blogs .d-flex p {
+    font-family: "Cairo";
+    line-height: 35px;
+}
+
+.landing-blogs .box {
+    width: 400px;
+    border: 2px solid var(--mainColor);
+}
+
+.landing-blogs .box img {
+    top: 16%;
+    right: -37%;
+    border: 2px solid var(--mainColor);
+}
+
+.owl-blogs img {
+    width: 56% !important;
+}
+
+.owl-posts img {
+    display: unset !important;
+    width: unset !important;
+}
+
+.posts .d-flex .image-logo {
+    left: 2%;
+    top: 23%;
+    opacity: 0.03;
+}
+
+.mt-8 {
+    margin-top: 8rem !important;
+}
+
+.owl-posts .owl-stage {
+    margin-top: 155px;
+}
+
+.owl-btns {
+    cursor: pointer;
+}
+
+.landing-blogs .box p {
+    font-family: "Cairo";
+}
+
+.subscriptions .circle {
+    border: rgb(255, 255, 255) solid 50px;
+    outline: var(--mainColor) 1px solid;
+    background-color: #009ee352;
+    border-radius: 50%;
+    width: 90vh;
+    height: 90vh;
+    margin-top: 20px;
+}
+
+.subscriptions .circle .icon {
+    background-color: var(--mainColor);
+    border: 3px solid #fff;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subscriptions .box {
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 20px #396abf1f;
+}
+
+.subscriptions .orbit .box .ball {
+    background-color: #7dcbef30;
+    width: 50px;
+    height: 50px;
+}
+
+.subscriptions h1,
+.landing-courses h1,
+.landing-blogs h1,
+.elite-clients h1 {
+    font-size: 56px;
+}
+
+/* ------------------------- Start Animation ---------------------------- */
+
+.subscriptions {
+    display: grid;
+    min-height: 140vh;
+    place-content: center;
+    overflow: hidden;
+}
+
+.subscriptions .orbit {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --size: 12rem;
+    --speed: 50s;
+}
+.subscriptions .orbit ul {
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    list-style: none;
+    transform-origin: center;
+    animation: orbit var(--speed) linear infinite;
+}
+.subscriptions .orbit ul:hover {
+    animation-play-state: paused;
+    --orbit-play-state: paused;
+}
+.subscriptions .orbit li {
+    position: absolute;
+    width: 300px;
+    height: 12rem;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.subscriptions .orbit li:hover {
+    --throb-play-state: paused;
+}
+.subscriptions .orbit li:nth-child(1) {
+    --throb-delay: 0ms;
+}
+.subscriptions .orbit li:nth-child(2) {
+    --throb-delay: 500ms;
+}
+.subscriptions .orbit li:nth-child(3) {
+    --throb-delay: 1000ms;
+}
+.subscriptions .orbit li:nth-child(4) {
+    --throb-delay: 1500ms;
+}
+
+.subscriptions .orbit li > * {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    position: absolute;
+    animation: orbit var(--speed) linear reverse infinite,
+        throb 1s var(--throb-delay) ease-in-out infinite alternate;
+    animation-play-state: var(--orbit-play-state, running),
+        var(--throb-play-state, running);
+}
+
+.subscriptions .orbit li:nth-child(1) {
+    transform: translate(20rem, 0rem);
+}
+.subscriptions .orbit li:nth-child(2) {
+    transform: translate(-1rem, 16rem);
+}
+.subscriptions .orbit li:nth-child(3) {
+    transform: translate(0, -19rem);
+}
+.subscriptions .orbit li:nth-child(4) {
+    transform: translate(-19rem, 0rem);
+}
+
+/* ------------------------- End Animation ---------------------------- */
+
+.landing-blogs .line {
+    width: 165px;
+}
+
+.landing-courses .card {
+    width: 550px;
+    border: 2px solid var(--mainColor);
+}
+
+.landing-courses {
+    background-color: #009fe312;
+}
+
+.landing-courses .card .badge-card {
+    font-size: 20px;
+    top: 0;
+    width: unset;
+}
+
+.elite-clients {
+    height: 95vh;
+}
+
+.elite-clients .box,
+.elite-clients-section .box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: rgb(167, 167, 167, 20%) 1px 1px 26px 1px;
+}
+.elite-clients .box {
+    width: 300px;
+}
+
+.elite-clients-section {
+    margin-top: 200px;
+}
+
+.elite-clients .box .stars,
+.elite-clients-section .box .stars {
+    color: var(--mainColor);
+}
+
+.elite-clients .owl-item:nth-child(odd) {
+    margin-bottom: 50px;
+}
+.elite-clients .owl-item:nth-child(even) {
+    margin-top: 50px;
+}
+
+.elite-clients .curved {
+    position: relative;
+    background: #009fe312;
+    height: 79vh;
+}
+
+.curved-dark::after {
+    background-color: #212529 !important;
+}
+
+.elite-clients .curved::after {
+    content: "";
+    border-top-left-radius: 138% 100%;
+    border-top-right-radius: 143% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 25%;
+}
+
+.elite-clients .reverse-curved::after {
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    height: 80%;
+}
+
+.elite-clients .reverse-curved {
+    height: 20vh;
+    transform: rotateX(180deg);
+}
+
+.posts {
+    padding-top: 190px;
+}
+
+.posts .post,
+.posts .post .post-image img,
+.posts-section .post {
+    border: 1px solid var(--mainColor);
+}
+
+.posts .post {
+    padding-top: 160px !important;
+}
+
+.posts .post .post-image {
+    top: -24%;
+    left: 40%;
+}
+
+.posts .interactions hr,
+.posts-section .post hr {
+    border-top: 1px solid #70707069;
+}
+
+.posts .post .interactions .likes .interaction,
+.posts-section .post .interactions .likes .interaction {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px 20px #65719005;
+    cursor: pointer;
+}
+
+.posts .interactions .likes .like-comment,
+.posts-section .interactions .likes .like-comment {
+    width: 20%;
+}
+.posts .interactions .comments .comment,
+.posts-section .interactions .comments .comment {
+    max-width: 500px;
+}
+
+.posts .post .post-content,
+.posts-section .post .post-content {
+    font-family: "Cairo";
+    font-size: 25px;
+}
+
+.posts .post .comments-number,
+.posts-section .post,
+.comments-number {
+    color: #747ea0;
+}
+
+.posts .interactions .comments .comment .float-end span,
+.posts-section .interactions .comments .comment .float-end span {
+    color: #2d3f7b;
+}
+
+.posts .post .comments .comment .comment-text,
+.posts-section .post .comments .comment .comment-text {
+    font-family: "Cairo";
+    font-size: 15px;
+}
+
+/* ------------------------- End Landing ---------------------------- */
+
+/* ------------------------- Start Posts ---------------------------- */
+.posts-section .post .image-logo {
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+}
+
+.posts-section .post:nth-child(even) {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/* ------------------------- End Posts ---------------------------- */
+
+/* ------------------------- Start Register ---------------------------- */
+
+.forms .card input,
+.forms .card select,
+.contact-us-section .card input,
+.contact-us-section .card textarea {
+    border-radius: 15px !important;
+    padding: 10px;
+}
+
+.forms .card button {
+    background-color: var(--mainColor);
+    color: #fff !important;
+    border-radius: 10px !important;
+}
+
+#contact-us button {
+    width: 200px;
+}
+/* ------------------------- End Register ---------------------------- */
+
+/* ------------------------- Start Login ---------------------------- */
+.image-login {
+    right: -449px;
+    top: -307px;
+}
+
+.image-login-en {
+    left: -449px;
+    top: -307px;
+}
+/* ------------------------- End Login ---------------------------- */
+
+/* ------------------------- Start Contact ---------------------------- */
+.headers .headers-text h1 {
+    font-size: 70px;
+}
+
+.headers .headers-text p {
+    font-size: 39px;
+}
+
+.headers .headers-text {
+    padding-top: 150px;
+}
+
+.contact-us-section,
+.blogs {
+    padding-top: 200px;
+}
+.contact-us-section .card p {
+    font-size: 15px;
+    color: #6e6e6e;
+}
+
+.contact-us-section a i {
+    color: var(--mainColor);
+    line-height: 1.6;
+}
+
+.contact-us-section a span {
+    letter-spacing: 0.1em;
+}
+/* ------------------------- End Contact ---------------------------- */
+
+/* ------------------------- Start Forget Password ---------------------------- */
+.forms .card .pin-code input {
+    border-radius: unset !important;
+    width: 40px;
+    height: 60px;
+    border-bottom: 1px solid #000 !important;
+}
+
+.forms .card .pin-code input:focus {
+    border: 1px solid #573d8b;
+    outline: none;
+}
+/* ------------------------- End Forget Password ---------------------------- */
+
+/* ------------------------- Start Blogs ---------------------------- */
+.blogs-header .headers-text h1 {
+    font-size: 90px;
+}
+.blogs-header .headers-text p {
+    font-size: 29px;
+}
+
+.badge-card {
+    border-end-end-radius: 7px;
+    border-top-left-radius: 7px;
+    font-size: 15px;
+    width: 200px;
+    right: 0;
+}
+
+.image-holder {
+    height: fit-content;
+    box-shadow: #2a2f5d12 1px 1px 20px 20px;
+}
+
+.blogs .last-blogs .last-blogs-text small {
+    font-size: 9px;
+    font-family: "Poppins";
+    color: #6e6e6e;
+}
+
+.blogs .last-blogs .single-last-blog .last-blogs-text {
+    font-family: "Cairo";
+}
+
+.last-blogs .social-media .icons .fa-twitter {
+    color: #fff;
+    background-color: var(--mainColor);
+}
+.last-blogs .social-media .icons i {
+    color: var(--mainColor);
+    box-shadow: #3442bb05 1px 1px 20px 20px;
+}
+
+.blogs .pag a:not(.page-active) {
+    color: var(--mainColor) !important;
+    border: none !important;
+}
+
+.blogs .page-active {
+    background-color: var(--mainColor) !important;
+    color: #fff !important;
+}
+
+.blogs .pagination-holder {
+    font-size: 20px;
+    box-shadow: #396abf17 1px 1px 20px 20px;
+}
+
+.blogs .card {
+    width: 90%;
+}
+/* ------------------------- End Blogs ---------------------------- */
+
+/* ------------------------- Start Blog ---------------------------- */
+.single-blog {
+    padding-top: 200px;
+}
+
+.single-blog .card p {
+    font-family: "Cairo";
+    font-size: 18px;
+}
+
+.single-blog .card .blog-text,
+.single-course .card .course-text {
+    background-color: hsl(198, 100%, 45%, 0.09);
+    border-right: 4px solid var(--mainColor);
+}
+
+.comments .comment .comment-details .stars i {
+    color: var(--mainColor);
+}
+
+.comments .comment .comment-details p {
+    color: #707070;
+    font-size: 20px;
+}
+
+#add-comment {
+    width: 66%;
+}
+
+/* ------------------------- End Blog ---------------------------- */
+/* ------------------------- Start FAQ ---------------------------- */
+
+.faq-header p {
+    font-family: "Cairo";
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.faq-section p {
+    font-family: "Cairo";
+    font-size: 25px;
+    letter-spacing: 1.3px;
+}
+
+.faq-header h1 {
+    font-size: 70px;
+}
+
+.faq-header center {
+    margin-top: 120px;
+}
+
+.image-faq {
+    right: -596px;
+    top: -124px;
+}
+
+.image-faq-en {
+    left: -596px;
+    top: -124px;
+}
+
+.faq-section h1 {
+    color: var(--mainColor);
+    font-size: 60px;
+}
+.faq-section {
+    padding-top: 0;
+}
+
+.faq-section .accordion-header button:not(.collapsed) {
+    background-color: var(--mainColor) !important;
+    color: #fff !important;
+}
+
+.faq-section .accordion-button,
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button {
+    border-radius: 10px !important;
+}
+
+.faq-section .accordion-item {
+    box-shadow: #00000003 1px 1px 20px 15px;
+    border-radius: 9px !important;
+}
+
+.accordion-header button::after {
+    display: none;
+}
+
+.faq-section .row {
+    margin-top: 120px !important;
+}
+
+.faq-section .accordion-header button .d-flex,
+.faq-section .accordion-body {
+    font-family: "Cairo" !important;
+    font-weight: 200 !important;
+}
+
+/* ------------------------- End FAQ ---------------------------- */
+
+/* ------------------------- Start Profile ---------------------------- */
+.user-profile .card .card_profile_img {
+    width: 120px;
+    height: 120px;
+    background-color: #868d9b;
+    background: url("https://source.unsplash.com/7Sz71zuuW4k");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #eb0f0f;
+    border-radius: 50%;
+    margin-top: -60px;
+}
+
+.user-profile .card .card_background_img {
+    width: 100%;
+    height: 102px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: url("https://source.unsplash.com/9wg5jCEPBsw");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.user-profile .card .camera-img {
+    background-color: #fff;
+    border: 1px solid var(--mainColor);
+    cursor: pointer;
+    bottom: 0;
+}
+
+.user-profile .card .user_details .verify span {
+    font-family: "Cairo";
+    font-size: 14px;
+    color: #676767;
+}
+
+.user-profile .card .user_details .verify:before {
+    content: "-----";
+    background-color: #eb0f0f;
+    color: #eb0f0f;
+    border-radius: 50%;
+}
+
+.user-profile .user-information i {
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+.user-profile .elite-agents {
+    height: 415px;
+    overflow-y: scroll;
+}
+
+.card nav .nav-tabs .active {
+    border: none;
+}
+
+.card nav .nav-tabs .active {
+    border-bottom: 3px solid var(--mainColor) !important;
+}
+
+.card nav .nav-tabs button {
+    color: #000;
+}
+
+.user-profile .card .accordion-header button:not(.collapsed) {
+    color: #000;
+}
+
+.user-profile .card .accordion-item {
+    position: relative;
+    border: none !important;
+}
+
+.user-profile .card .accordion-button::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 70%;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.user-profile .card .accordion-button-en::before {
+    left: 0;
+}
+
+.user-profile .card .delete-account::before {
+    display: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+}
+
+#edit-user label {
+    font-family: "Cairo";
+    font-size: 14px;
+}
+
+.modal-dialog {
+    max-width: 700px !important;
+    margin: auto !important;
+    padding-top: 30px;
+}
+
+.tab-pane .bot-money hr {
+    color: #d3d3d3;
+}
+
+.withdrawl .d-flex p {
+    font-size: 18px;
+    color: var(--mainColor);
+}
+
+#VerifyUser button {
+    width: 165px !important;
+}
+
+.tab-pane .bot-money .d-flex {
+    font-size: 20px;
+}
+
+.tab-pane .bot-money .button-fill {
+    width: 150px;
+}
+
+.tab-pane .wallet .d-flex p:first-of-type,
+.bitcoin {
+    color: var(--mainColor);
+}
+
+.tab-pane .wallet .d-flex p:first-of-type {
+    font-size: 22px;
+}
+
+.tab-pane .wallet .wallet-details .details {
+    width: 500px;
+}
+
+.tab-pane .links a {
+    color: unset;
+}
+
+.tab-pane .links .active-nav {
+    background-color: var(--mainColor);
+    color: #fff !important;
+    height: fit-content !important;
+}
+
+.tab-pane .wallet .wallet-details .details .underline::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.modal-body .close {
+    background-color: #7e7e7e;
+    color: #fff;
+}
+
+#BinanceAddress .close:hover {
+    border: 1px solid #7e7e7e;
+    background-color: #fff;
+    color: #7e7e7e;
+}
+
+#lang .modal-body input {
+    border: 1px solid var(--mainColor);
+}
+
+#lang .modal-body hr {
+    color: #6e6e6e;
+}
+#lang .modal-dialog {
+    max-width: 500px !important;
+}
+
+.bot-moves .line {
+    width: 270px;
+    height: 2px;
+}
+
+.bot-money .stop-bot {
+    background-color: #aa0000;
+    width: 160px;
+}
+
+.bot-money .stop-bot:hover {
+    background-color: transparent;
+    color: #aa0000;
+    border: 1px solid #aa0000;
+    color: #aa0000 !important;
+}
+
+.end-bot {
+    cursor: pointer;
+    color: #000;
+}
+
+.end-bot:hover {
+    background-color: var(--mainColor) !important;
+    color: #fff;
+}
+
+.notification .notify p {
+    color: #676767;
+}
+
+/* ------------------------- End Profile ---------------------------- */
+
+/* ------------------------- Start Courses ---------------------------- */
+
+.courses .badge-card,
+.single-course .badge-card {
+    width: 100px;
+    font-size: 20px;
+}
+
+/* ------------------------- End Courses ---------------------------- */
+
+/* ------------------------- Start Course ---------------------------- */
+.course-details .d-flex:not(:last-child) {
+    box-shadow: 1px 1px 20px 0px #e7eaf0;
+}
+.course-details p {
+    color: #6e6e6e;
+}
+
+.single-course .share-course {
+    width: 400px;
+}
+/* ------------------------- End Course ---------------------------- */
+
+/* ------------------------- Start Subscribe Course ---------------------------- */
+#subscribe-course .sub-form,
+#req-join .sub-form {
+    border: 1px solid #cecece;
+    border-radius: 15px;
+    font-family: "Cairo";
+}
+
+#req-join .sub-form {
+    font-size: 20px;
+}
+
+#req-join .input-group label {
+    color: #009ee3;
+    font-size: 14px;
+    font-family: "Cairo";
+}
+
+#req-join .modal-dialog {
+    max-width: 900px !important;
+}
+/* ------------------------- End Subscribe Course ---------------------------- */
+
+.bot-terms li,
+.privacy-policy li,
+.privacy-policy p {
+    font-family: "Cairo";
+}
+
+/* ------------------------- Start Recorded Course ---------------------------- */
+
+.overlay-video {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.recorded-course-header h1 {
+    font-size: 50px;
+}
+
+.recorded-course .play-button {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recorded-course {
+    padding-top: 240px;
+}
+
+.recorded-course .play-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recorded-course .titles .selected-title {
+    background-color: var(--mainColor);
+}
+
+.recorded-course .titles {
+    box-shadow: 1px 1px 21px 1px rgb(0, 0, 0, 16%);
+    border-radius: 15px;
+    min-height: 1400px;
+}
+
+.recorded-course .card {
+    box-shadow: 1px 1px 21px 1px rgb(0, 0, 0, 16%);
+}
+
+.recorded-course .titles h4 {
+    color: #006fa0;
+}
+
+.recorded-course .titles .fill-circle,
+.recorded-course .titles .not-fill-circle {
+    width: 23px;
+    height: 23px;
+}
+
+.recorded-course .titles .fill-circle {
+    background-color: #006fa0;
+}
+
+.recorded-course .titles .not-fill-circle {
+    background-color: #bfbfbf;
+}
+
+.recorded-course .titles .checked {
+    background-color: #006fa0;
+}
+
+.recorded-course .titles .select-icon {
+    border: 3px solid #006fa0;
+    width: 38px;
+    height: 38px;
+}
+
+/* ------------------------- End Recorded Course ---------------------------- */
+
+/* ------------------------- Start Footer  ---------------------------- */
+footer {
+    background-color: var(--mainColor);
+}
+footer .before::before {
+    color: #9dc1e5;
+    margin-right: 0;
+}
+footer .hr {
+    background-color: #fff;
+    height: 1px;
+}
+footer a {
+    color: unset !important;
+}
+footer .links span {
+    opacity: 0.9;
+}
+
+footer .other-links {
+    padding-right: 70px;
+}
+
+.footer-mobile {
+    box-shadow: 1px 1px 20px 1px rgb(0, 0, 0, 26%);
+    border-top: 1px solid #ffffff59;
+    background-color: #fff;
+}
+.footer-mobile a {
+    color: #818181 !important;
+    font-size: 13px;
+    font-family: "Cairo";
+}
+/* ------------------------- End Footer  ---------------------------- */
+
+/* ------------------------- X Large Screen  ---------------------------- */
+
+@media (min-width: 1600px) {
+    .image-login {
+        right: -566px;
+        top: -354px;
+    }
+    .image-login-en {
+        left: -566px;
+        top: -354px;
+    }
+    .owl-number .owl-stage-outer {
+        margin-top: 70px;
+    }
+
+    .landing-page center img {
+        width: 100%;
+    }
+
+    .landing-page .content {
+        margin-top: 170px !important;
+    }
+
+    .elite-clients .curved::after {
+        height: 34%;
+    }
+    .elite-clients .reverse-curved::after {
+        height: 8vh;
+    }
+    .elite-clients .reverse-curved {
+        height: 16vh;
+    }
+    .subscriptions .orbit li:nth-child(1) {
+        transform: translate(24rem, -2rem) !important;
+    }
+    .subscriptions .orbit li:nth-child(2) {
+        transform: translate(0, 22rem) !important;
+    }
+
+    .subscriptions .orbit li:nth-child(3) {
+        transform: translate(0, -26rem) !important;
+    }
+
+    .subscriptions .orbit li:nth-child(4) {
+        transform: translate(-24rem, -2rem) !important;
+    }
+
+    .register-image,
+    .register-image-en {
+        height: 218%;
+    }
+
+    .courses {
+        margin-top: 200px;
+    }
+
+    .contact-us-section {
+        margin-top: 200px;
+    }
+    .blog-image {
+        right: -381px;
+        top: -1404px;
+    }
+    .blog-image-en {
+        left: -95px;
+        top: -1080px;
+    }
+    .subscriptions .orbit li {
+        width: 340px !important;
+        height: 14rem !important;
+    }
+
+    .subscriptions .orbit .box .content .d-flex {
+        font-size: 20px;
+    }
+    .blogs {
+        padding-top: 180px !important;
+    }
+}
+
+/* ------------------------- X Large Screen  ---------------------------- */
+
+/* ------------------------- X Mobile Screen  ---------------------------- */
+
+@media (max-width: 992px) {
+    nav {
+        padding: 0 !important;
+    }
+    nav a {
+        text-align: right;
+        font-weight: 500 !important;
+        color: gray !important;
+    }
+    nav .navbar-nav {
+        margin-right: 15px !important;
+    }
+    nav .navbar-brand {
+        margin: 0 !important;
+    }
+    .last-blogs {
+        font-size: 14px;
+        max-width: 81%;
+    }
+
+    .single-blog .last-blogs {
+        margin-right: 15px !important;
+    }
+    .blogs-header .headers-text h1 {
+        font-size: 50px !important;
+    }
+    .blogs,
+    .contact-us-section,
+    .single-blog,
+    .create-bot,
+    .user-profile,
+    .courses,
+    .course-header,
+    .single-course,
+    .posts-section {
+        padding-top: 30px !important;
+    }
+    .blogs-header .headers-text {
+        padding-top: 70px;
+    }
+    .blogs .card {
+        width: 100% !important;
+        margin-bottom: 3rem !important;
+    }
+    .last-blogs .social-media .d-flex {
+        font-size: 20px;
+        width: 80% !important;
+    }
+    .faq-header h1 {
+        margin: 0 !important;
+        font-size: 45px !important;
+    }
+    .faq-section h1 {
+        font-size: 50px !important;
+        margin-bottom: 20px;
+    }
+    .contact-text {
+        font-size: 40px !important;
+    }
+    .create-bot .card .col-6 {
+        width: 100% !important;
+    }
+    #withdrawal-history .underline {
+        padding: 0 !important;
+    }
+    #withdrawal-history .underline .d-flex p:first-of-type {
+        text-align: center;
+    }
+    #withdrawal-history .details {
+        width: 100%;
+    }
+
+    .headers .headers-text p {
+        font-size: 20px !important;
+    }
+    .headers .headers-text h1 {
+        font-size: 50px;
+    }
+    .headers {
+        padding: 0px;
+    }
+    .contact-us-section,
+    .blogs {
+        padding-top: 100px !important;
+    }
+
+    .headers .headers-text {
+        padding-top: 50px !important;
+    }
+
+    .counts .count {
+        width: 100%;
+    }
+    .elite-clients .curved {
+        height: 59vh;
+    }
+    .elite-clients .reverse-curved {
+        height: 15vh;
+    }
+    .elite-clients .curved::after {
+        height: 16%;
+    }
+    .elite-clients .reverse-curved::after {
+        height: 45%;
+    }
+    .elite-clients .owl-item:nth-child(odd) {
+        margin-bottom: 0px;
+    }
+    .elite-clients .owl-item:nth-child(even) {
+        margin-top: 0px;
+    }
+    .landing-page .content {
+        margin-top: 60px;
+    }
+    .subscriptions .circle {
+        width: 70vh;
+        height: 70vh;
+    }
+    .posts .post .post-image {
+        top: -16%;
+        left: 18%;
+    }
+    .owl-courses .card {
+        width: 100%;
+    }
+    .post .comments-number {
+        font-size: 13px;
+    }
+    .post .interactions .icons {
+        width: 30px !important;
+    }
+    .post .interactions .likes .like-comment {
+        width: 75% !important;
+    }
+    .likes .interaction .interaction-icons {
+        width: 25px !important;
+    }
+    .post .post-content {
+        font-size: 20px !important;
+    }
+    .post .comments .comment .comment-content h4 {
+        font-size: 20px;
+    }
+
+    .elite-clients .box {
+        margin: auto;
+    }
+    .posts-section .post:nth-child(even) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .landing-blogs .box img {
+        top: -52%;
+        z-index: 5;
+        right: 21%;
+    }
+
+    .landing-blogs .box {
+        width: 100%;
+    }
+    .subscriptions .line {
+        margin-bottom: 120px !important;
+    }
+
+    .landing-page {
+        padding-top: 0px !important;
+    }
+
+    .landing-page .content {
+        margin-bottom: 0px !important;
+    }
+
+    .forms .card {
+        width: 100% !important;
+    }
+
+    #add-comment {
+        width: 100%;
+    }
+
+    .tab-pane .wallet .wallet-details .details .d-flex {
+        width: 100% !important;
+    }
+    .bot-money .d-flex {
+        width: 100% !important;
+    }
+
+    .courses .container .px-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .single-course .course-details {
+        margin-right: 0 !important;
+    }
+    .course-header {
+        padding-bottom: 0 !important;
+    }
+    .course-header img {
+        width: 91%;
+    }
+    .single-course .share-course {
+        width: 100%;
+    }
+    .owl-blogs .owl-stage {
+        margin-top: 160px;
+    }
+
+    #req-join .col {
+        margin: 0 !important;
+    }
+
+    .subscriptions .orbit li {
+        width: 270px;
+        height: 11rem;
+    }
+
+    footer,
+    .tab-pane .links {
+        text-align: center;
+    }
+    footer .links,
+    .tab-pane .links {
+        width: 100% !important;
+        flex-direction: column;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    nav .btns {
+        margin-bottom: 20px;
+    }
+
+    .landing-page center img {
+        margin-top: 30px;
+    }
+    .elite-clients-section {
+        margin-top: 0;
+    }
+
+    #req-join .col-6 {
+        width: 100% !important;
+    }
+    .recorded-course {
+        padding-top: 0 !important;
+    }
+    .recorded-course-header h1 {
+        font-size: 44px !important;
+    }
+    .recorded-course-header {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    .recorded-course .play-button {
+        width: 50px;
+        height: 50px;
+    }
+    .recorded-course .play-button img {
+        width: 15px;
+    }
+    .bot-terms .card,
+    .privacy-policy .card {
+        width: 100% !important;
+    }
+    footer .other-links {
+        padding: 0 !important;
+    }
+}
+
+/* ------------------------- X Mobile Screen  ---------------------------- */
+
+@keyframes orbit {
+    100% {
+        rotate: 1turn;
+    }
+}
+@keyframes hold-position {
+    100% {
+        rotate: -1turn;
+    }
+}
+@keyframes throb {
+    100% {
+        scale: 1.05;
+    }
+}

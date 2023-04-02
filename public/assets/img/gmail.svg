@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="ellipse" cx="22" cy="22" r="22" fill="#fff" stroke="#e2e2eb" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_19" data-name="Mask Group 19" clip-path="url(#clip-path)">
+    <path id="icons8_mail_1" d="M0,8.87v44H44v-44ZM40.48,20.2,22,34.757,3.52,20.2V17.318L22,31.874,40.48,17.318Z" transform="translate(0 -8.871)" fill="#fff"/>
+  </g>
+</svg>

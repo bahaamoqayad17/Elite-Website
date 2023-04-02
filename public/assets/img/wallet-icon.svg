@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.451" height="27.113" viewBox="0 0 31.451 27.113">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8066" data-name="Rectangle 8066" width="31.451" height="27.113" transform="translate(0)" fill="#b7b7b7" stroke="#b7b7b7" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_152" data-name="Mask Group 152" clip-path="url(#clip-path)">
+    <g id="wallet-3-svgrepo-com" transform="translate(1.935 1.015)">
+      <path id="Path_1047" data-name="Path 1047" d="M17.311,14.634H9.187" transform="translate(-2.417 -3.382)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.969" opacity="0.4"/>
+      <path id="Path_1048" data-name="Path 1048" d="M2.625,14.979V8.724a4.993,4.993,0,0,1,5-5h7.61c2.762,0,5,1.72,5,4.482" transform="translate(-2.625 -3.727)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.969" opacity="0.4"/>
+      <path id="Path_1049" data-name="Path 1049" d="M23.585,16.263a2.726,2.726,0,0,0-.731,2.681A2.939,2.939,0,0,0,25.738,21H27v1.963a5.415,5.415,0,0,1-5.416,5.416H8.041a5.415,5.415,0,0,1-5.416-5.416V13.488A5.415,5.415,0,0,1,8.041,8.072h13.54A5.432,5.432,0,0,1,27,13.488v1.963H25.535A2.7,2.7,0,0,0,23.585,16.263Z" transform="translate(-2.625 -3.59)" fill="none" stroke="#b7b7b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.969"/>
+      <path id="Path_1050" data-name="Path 1050" d="M29.088,16.606V19.4a1.39,1.39,0,0,1-1.395,1.381H25.08a2.887,2.887,0,0,1-2.925-2.532,2.79,2.79,0,0,1,2.762-3.02h2.776A1.39,1.39,0,0,1,29.088,16.606Z" transform="translate(-2.007 -3.363)" fill="none" stroke="#b7b7b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.969"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="ellipse" cx="22" cy="22" r="22" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_18" data-name="Mask Group 18" clip-path="url(#clip-path)">
+    <path id="icons8_Instagram_1" d="M17.4,4.4a13.012,13.012,0,0,0-13,13v18a13.012,13.012,0,0,0,13,13h18a13.012,13.012,0,0,0,13-13v-18a13.012,13.012,0,0,0-13-13Zm21,8a2,2,0,1,1-2,2,2,2,0,0,1,2-2Zm-12,3a11,11,0,1,1-11,11,11,11,0,0,1,11-11Zm0,2a9,9,0,1,0,9,9,9,9,0,0,0-9-9Z" transform="translate(-4.4 -4.4)" fill="#fff"/>
+  </g>
+</svg>
