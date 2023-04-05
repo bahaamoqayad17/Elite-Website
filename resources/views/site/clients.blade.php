@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <section class="elite-clients-section">
+    <section class="elite-clients-section pt-5 position-relative z-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">

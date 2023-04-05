@@ -1,6 +1,6 @@
 @extends('site.master')
 
-@section('title', config('app.name') . ' | Recorded Course')
+@section('title', config('app.name') . ' | Privacy Policy')
 
 @section('content')
 

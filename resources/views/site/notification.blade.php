@@ -1,16 +1,13 @@
 @extends('site.master')
 
-@section('title', config('app.name') . ' | Bot Moves')
+@section('title', config('app.name') . ' | Notifications')
 
 @section('content')
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    {{-- <img class="d-none d-sm-block position-absolute notification-image z-n1"
+        src="{{ asset('assets/img/login' . app()->isLocale('ar') ? '' : '-en' . '.svg') }}" /> --}}
+    <img class="d-none d-sm-block position-absolute notification-image z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
 <section class="notification">

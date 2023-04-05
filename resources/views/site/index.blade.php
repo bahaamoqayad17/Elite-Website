@@ -11,19 +11,14 @@
 
 @section('content')
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    <img class="d-none d-sm-block position-absolute image-login z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
-<header class="landing-page pb-0">
+<header class="landing-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="mt-5">
+                <div class="mt-5 text">
                     <h1 class="fw-bold">{{ __('تكنو إليت') }}</h1>
                     <h2 class="fw-bold">{{ __('للتدريب والإستثمار وتكنولوجيا المعلومات') }}</h2>
                     <a class="btn create-bot-btn fw-bold mt-5"
@@ -35,7 +30,7 @@
                         {{ __('شارع الكنز - برج نعمة - الطابق السابع') }}
                     </p>
                     <div class="d-flex">
-                        <p class="me-4 fw-bold">0000000000 - 1700200020</p>
+                        <p class="me-4 fw-bold">0594790590 - 1700200020</p>
                         <div class="before fw-bold">
                             <img width="30" height="25" src="{{ asset('assets/img/landing-phone.svg') }}">
                         </div>
@@ -137,7 +132,7 @@
         </div>
         <div class="owl-carousel owl-blogs mt-5">
             <div class="box mx-auto item p-5 position-relative">
-                <div class="{{ app()->isLocale('ar') ? 'ms-5' : 'me-5' }}">
+                <div class="ms-5">
                     <h4 class="fw-bold">التجارة الإلكترونية</h4>
                     <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
                         حيث
@@ -145,8 +140,8 @@
                         أن تولد مثل هذا النص أو العديد من النصوص الاخرى
                     </p>
                 </div>
-                <img class="position-absolute object-fit-cover" width="67%" height="60%"
-                    src="{{ asset('assets/img/blog-image.png') }}">
+                <img class="position-absolute object-fit-cover {{ app()->isLocale('ar') ? 'blog-image-slider' : 'blog-image-slider-en' }}"
+                    width="67%" height="60%" src="{{ asset('assets/img/blog-image.png') }}">
                 <div class="d-flex flex-row-reverse">
                     <a href="{{ route('site.blog', 1) }}">
                         {{ __('اقرأ المزيد') }}
@@ -154,7 +149,7 @@
                 </div>
             </div>
             <div class="box mx-auto item p-5 position-relative">
-                <div class="{{ app()->isLocale('ar') ? 'ms-5' : 'me-5' }}">
+                <div class="ms-5">
                     <h4 class="fw-bold">التجارة الإلكترونية</h4>
                     <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
                         حيث
@@ -162,8 +157,8 @@
                         أن تولد مثل هذا النص أو العديد من النصوص الاخرى
                     </p>
                 </div>
-                <img class="position-absolute object-fit-cover" width="67%" height="60%"
-                    src="{{ asset('assets/img/blog-image.png') }}">
+                <img class="position-absolute object-fit-cover {{ app()->isLocale('ar') ? 'blog-image-slider' : 'blog-image-slider-en' }}"
+                    width="67%" height="60%" src="{{ asset('assets/img/blog-image.png') }}">
                 <div class="d-flex flex-row-reverse">
                     <a href="{{ route('site.blog', 1) }}">
                         {{ __('اقرأ المزيد') }} {!! app()->isLocale('ar') ? '&#8592;' : '&#8594;' !!}</a>
@@ -375,7 +370,7 @@
                     </p>
                     <div class="interactions">
                         <div class="d-flex justify-content-between">
-                            <p class="comments-number">30 تعليق</p>
+                            <p class="comments-number">30 {{ __('تعليق') }}</p>
                             <div class="d-flex d-sm-none">
                                 <p class="mb-0 mt-1 me-1 comments-number users-number">50
                                     تفاعل</p>
@@ -422,12 +417,11 @@
                                 </div>
                                 <div class="float-end">
                                     <a href="">
-                                        <span class="{{ app()->isLocale('ar') ? 'ms-3' : 'me3' }}">Like</span>
+                                        <span class="me-3">{{ __('إعجاب') }}</span>
 
                                     </a>
                                     <a href="">
-                                        <span>Reply</span>
-
+                                        <span>{{ __('رد') }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -450,7 +444,7 @@
                     </p>
                     <div class="interactions">
                         <div class="d-flex justify-content-between">
-                            <p class="comments-number">30 تعليق</p>
+                            <p class="comments-number">30 {{ __('تعليق') }}</p>
                             <div class="d-flex d-sm-none">
                                 <p class="mb-0 mt-1 me-1 comments-number users-number">50
                                     تفاعل</p>
@@ -497,12 +491,11 @@
                                 </div>
                                 <div class="float-end">
                                     <a href="">
-                                        <span class="{{ app()->isLocale('ar') ? 'ms-3' : 'me3' }}">Like</span>
+                                        <span class="me-3">{{ __('إعجاب') }}</span>
 
                                     </a>
                                     <a href="">
-                                        <span>Reply</span>
-
+                                        <span>{{ __('رد') }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -525,7 +518,7 @@
                     </p>
                     <div class="interactions">
                         <div class="d-flex justify-content-between">
-                            <p class="comments-number">30 تعليق</p>
+                            <p class="comments-number">30 {{ __('تعليق') }}</p>
                             <div class="d-flex d-sm-none">
                                 <p class="mb-0 mt-1 me-1 comments-number users-number">50
                                     تفاعل</p>
@@ -572,12 +565,11 @@
                                 </div>
                                 <div class="float-end">
                                     <a href="">
-                                        <span class="{{ app()->isLocale('ar') ? 'ms-3' : 'me3' }}">Like</span>
+                                        <span class="me-3">{{ __('إعجاب') }}</span>
 
                                     </a>
                                     <a href="">
-                                        <span>Reply</span>
-
+                                        <span>{{ __('رد') }}</span>
                                     </a>
                                 </div>
                             </div>

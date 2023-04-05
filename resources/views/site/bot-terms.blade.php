@@ -1,17 +1,12 @@
 @extends('site.master')
 
-@section('title', config('app.name') . ' | Recorded Course')
+@section('title', config('app.name') . ' | Bot Terms')
 
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute register-image z-n1" src="{{ asset('assets/img/register.svg') }}"
-            width="56%" />
-    @else
-        <img class="d-none d-sm-block position-absolute register-image-en z-n1"
-            src="{{ asset('assets/img/register-en.svg') }}" width="56%" />
-    @endif
+    <img class="d-none d-sm-block position-absolute terms-image z-n1"
+        src="{{ asset('assets/img/register' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
 <section class="bot-terms">

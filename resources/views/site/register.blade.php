@@ -5,13 +5,8 @@
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute register-image z-n1" src="{{ asset('assets/img/register.svg') }}"
-            width="57%" />
-    @else
-        <img class="d-none d-sm-block position-absolute register-image-en z-n1"
-            src="{{ asset('assets/img/register-en.svg') }}" width="57%" />
-    @endif
+    <img class="d-none d-sm-block position-absolute register-image z-n1"
+        src="{{ asset('assets/img/register' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" width="57%" />
 @endsection
 
 
@@ -32,8 +27,10 @@
                 </div>
                 @if (!app()->isLocale('en'))
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control me-2" placeholder="الاسم (En)" name="first_name_en" />
-                        <input type="text" class="form-control" placeholder="اسم العائلة (En)" name="last_name_en" />
+                        <input type="text" class="form-control me-2" placeholder="{{ __('الاسم (En)') }}"
+                            name="first_name_en" />
+                        <input type="text" class="form-control" placeholder="{{ __('اسم العائلة (En)') }}"
+                            name="last_name_en" />
                     </div>
                 @endif
                 <div class="input-group mb-3">

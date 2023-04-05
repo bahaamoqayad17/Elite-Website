@@ -43,6 +43,17 @@ $(document).ready(function () {
 
     showWalletTable();
 
+    $("#nav-settings-tab").on("click", function () {
+        $(".user-profile").css({
+            paddingBottom: "100px",
+        });
+    });
+    $("#nav-wallet-tab").on("click", function () {
+        $(".user-profile").css({
+            paddingBottom: "50px",
+        });
+    });
+
     $(".nav-link").on("click", function () {
         setTimeout(() => {
             showWalletTable();
@@ -73,7 +84,7 @@ $(document).ready(function () {
     });
 
     $(document).scroll(function () {
-        // handleScroll();
+        handleScroll();
         countup();
     });
     const handleScroll = () => {
@@ -202,9 +213,10 @@ function setTheme(theme) {
             backgroundColor: "#343C44",
         });
         $(".subscriptions .circle").css({
-            borderColor: "#343C44",
-            backgroundColor: "#20242552",
-            outline: "#504c4c 3px solid",
+            borderColor: "#1B2326",
+            background:
+                "linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 220.8%)",
+            outline: "#162C3E 3px solid",
         });
         $(".subscriptions .circle .icon").css({
             backgroundColor: "#504c4c",
@@ -256,7 +268,7 @@ function setTheme(theme) {
         });
         $(".subscriptions .circle").css({
             borderColor: "#fff",
-            backgroundColor: "#009ee352",
+            background: "#009ee352",
             outline: "1px solid #009ee3",
         });
         $(".subscriptions .circle .icon").css({

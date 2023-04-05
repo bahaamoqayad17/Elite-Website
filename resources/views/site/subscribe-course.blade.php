@@ -1,17 +1,12 @@
 @extends('site.master')
 
-@section('title', config('app.name') . ' | Register')
+@section('title', config('app.name') . ' | Subscribe Course')
 
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none register-image d-sm-block position-absolute z-n1" src="{{ asset('assets/img/register.svg') }}"
-            width="57%" />
-    @else
-        <img class="d-none register-image-en d-sm-block position-absolute z-n1"
-            src="{{ asset('assets/img/register-en.svg') }}" width="57%" />
-    @endif
+    <img class="d-none d-sm-block position-absolute register-image z-n1"
+        src="{{ asset('assets/img/register' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" width="57%" />
 @endsection
 
 <section id="subscribe-course" class="forms">

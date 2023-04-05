@@ -5,13 +5,9 @@
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%" alt="">
-    @endif
+    <img class="d-none d-sm-block position-absolute profile-image z-n1"
+        src="{{ asset('assets/img/profile-image' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
+
 @endsection
 
 <section class="user-profile">
@@ -73,25 +69,25 @@
                 <div class="card elite-agents p-4 border-0 mb-5">
                     <div class="text-center mb-3">
                         <h2 class="fw-bold mb-4">{{ __('وكلاء إليت') }}</h2>
-                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none">
+                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none w-75 m-auto">
                             <h4 class="fw-bold">{{ __('الصبيح للصرافة') }}</h4>
                             <p class="mb-2">{{ __('العنوان') }}: شارع الوحدة - مقابل
                                 معهد الأمل</p>
                             <p>{{ __('رقم الجوال') }}: 0594320007</p>
                         </div>
-                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none">
+                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none w-75 m-auto">
                             <h4 class="fw-bold">{{ __('الصبيح للصرافة') }}</h4>
                             <p class="mb-2">{{ __('العنوان') }}: شارع الوحدة - مقابل
                                 معهد الأمل</p>
                             <p>{{ __('رقم الجوال') }}: 0594320007</p>
                         </div>
-                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none">
+                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none w-75 m-auto">
                             <h4 class="fw-bold">{{ __('الصبيح للصرافة') }}</h4>
                             <p class="mb-2">{{ __('العنوان') }}: شارع الوحدة - مقابل
                                 معهد الأمل</p>
                             <p>{{ __('رقم الجوال') }}: 0594320007</p>
                         </div>
-                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none">
+                        <div class="card bg-fa mb-3 p-4 border-0 shadow-none w-75 m-auto">
                             <h4 class="fw-bold">{{ __('الصبيح للصرافة') }}</h4>
                             <p class="mb-2">{{ __('العنوان') }}: شارع الوحدة - مقابل
                                 معهد الأمل</p>
@@ -113,7 +109,6 @@
                                 data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
                                 aria-selected="false">{{ __('البوت') }}</button>
 
-
                             <button class="nav-link mb-0 " id="nav-settings-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-settings" type="button" role="tab"
                                 aria-controls="nav-settings" aria-selected="false">{{ __('الإعدادات') }}</button>
@@ -121,8 +116,16 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
 
-                        <div class="tab-pane fade p-5" id="nav-profile" role="tabpanel"
+                        <div class="tab-pane fade p-5 pt-4" id="nav-profile" role="tabpanel"
                             aria-labelledby="nav-profile-tab" tabindex="0">
+                            <div class="d-none d-sm-flex flex-row-reverse mb-4">
+                                <a href="{{ route('site.create_bot') }}"
+                                    class="btn button-fill w-25">{{ __('إنشاء بوت جديد') }}</a>
+                            </div>
+                            <div class="d-flex d-sm-none justify-content-center mb-4 w-100">
+                                <a href="{{ route('site.create_bot') }}"
+                                    class="btn button-fill w-50">{{ __('إنشاء بوت جديد') }}</a>
+                            </div>
                             <div id="active-bot-archive" class="mb-4 end-bot bg-fa p-2 rounded">
                                 <img width="45" src="{{ asset('assets/img/bot.svg') }}" alt="">
                                 <span class="ms-2 h5">{{ __('أرشيف البوت المنتهي') }}</span>
@@ -303,7 +306,7 @@
                                                 <div
                                                     class="d-flex flex-sm-row flex-column align-items-center mb-3 w-75
                                                 justify-content-between">
-                                                    <p>{{ __('قيمة المبلغ المطلوب سحبه') }}</p>
+                                                    <p>{{ __('قيمة السحب') }}</p>
                                                     <p>(0.00 USDT)</p>
                                                 </div>
                                             </div>
@@ -459,13 +462,20 @@
                         <span class="ms-3">{{ __('معلومات المستخدم') }}</span>
                     </div>
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <div id="edit-user" class="forms">
                     <div class="container">
                         <div>
                             <form action="" id="edit-user" enctype="multipart/form-data" method="post">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">{{ __('رقم الهوية') }}</label>
+                                    <input type="text" class="form-control" placeholder="{{ __('رقم الهوية') }}"
+                                        name="national_id" />
+                                </div>
                                 <div class="d-flex mb-3">
+
                                     <div class="col">
                                         <label class="mb-2">{{ __('الاسم') }}</label>
                                         <input type="text" class="form-control me-2"
@@ -491,7 +501,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="mb-2">{{ __('البريد الإلكتروني') }}</label>
-                                    <input type="text" class="form-control"
+                                    <input type="email" class="form-control"
                                         placeholder="{{ __('البريد الإلكتروني') }}" name="email" />
                                 </div>
 
@@ -504,6 +514,11 @@
                                     <label class="mb-2">{{ __('العنوان') }}</label>
                                     <input type="text" class="form-control" placeholder="{{ __('العنوان') }}"
                                         name="address" />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="mb-2">{{ __('تاريخ الميلاد') }}</label>
+                                    <input type="text" class="form-control"
+                                        placeholder="{{ __('تاريخ الميلاد') }}" name="date" />
                                 </div>
                         </div>
                     </div>
@@ -531,8 +546,9 @@
                         <span class="ms-3">{{ __('التحقق من الحساب') }}</span>
                     </div>
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <div class="forms">
                     <div class="container">
                         <div>
@@ -574,13 +590,13 @@
 <div class="modal fade" id="lang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog my-auto p-5">
         <div class="modal-content p-5">
-            <div class="modal-header d-block text-center">
+            <div class="modal-header mb-3 justify-content-center">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('اللغة') }}
                 </h1>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <div class="form-check d-flex justify-content-between px-4">
                     <label class="form-check-label" for="flexRadioDefault1">
                         {{ __('العربية') }}
@@ -611,14 +627,15 @@
 <div class="modal fade" id="BotMoves" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5">
         <div class="modal-content p-4">
-            <div class="modal-header d-block text-center">
+            <div class="modal-header px-1 text-center mb-3">
                 <h1 class="modal-title fw-bold fs-5">
                     <img width="45" src="{{ asset('assets/img/bot.svg') }}" alt="">
-                    <span class="h3">{{ __('تفاصيل البوت') }}</span>
+                    <h3 class="h3 mt-2 d-inline">{{ __('تفاصيل البوت') }}</h3>
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <div class="d-flex justify-content-between px-2">
                     <p>{{ __('رقم البوت') }}</p>
                     <p>10841</p>
@@ -673,15 +690,16 @@
 <div class="modal fade" id="BinanceAddress" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5">
         <div class="modal-content p-4">
-            <div class="modal-header d-block">
+            <div class="modal-header px-1 mb-4">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('عنوان محفظة بينانس') }}
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <form action="">
                     <div class="form-group mb-3">
-                        <label class="mb-2">{{ __('عنوان محفظة بينانس (TRC20) (*)') }}</label>
+                        <label class="mb-3">{{ __('عنوان محفظة بينانس (TRC20) (*)') }}</label>
                         <input type="text" class="form-control"
                             placeholder="{{ __('عنوان محفظة بينانس الخاص بك') }}" name="binance-address" />
                     </div>
@@ -700,19 +718,20 @@
 <div class="modal fade" id="BinanceApi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5" role="document">
         <div class="modal-content p-4">
-            <div class="modal-header d-block">
+            <div class="modal-header px-1 mb-4">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('بيانات Api Binance') }}
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <form>
                     <div class="form-group mb-3">
                         <label>Proxy (*)</label>
                         <label class="btn h-50 button-fill btn-sm float-end mb-2" id="generate_ip_proxy">Generate ip
                             proxy</label>
                         <input type="text" name="proxy" step="any" class="form-control" autocomplete="off"
-                            disabled="">
+                            disabled>
                     </div>
                     <div class="form-group mb-3">
                         <label>Api Key (*)</label>
@@ -740,23 +759,24 @@
 <div class="modal fade" id="TransferWallet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5" role="document">
         <div class="modal-content p-4">
-            <div class="modal-header d-block">
+            <div class="modal-header px-1">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('تحويل من محفظة لمحفظة') }}
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0 mt-2">
                 <form>
                     <div class="form-group mb-3">
-                        <label>{{ __('عنوان المحفظة (*)') }}</label>
+                        <label class="mb-2">{{ __('عنوان المحفظة (*)') }}</label>
                         <input type="text" class="form-control" autocomplete="off">
                     </div>
                     <div class="form-group mb-3">
-                        <label>{{ __('قيمة المبلغ (*)') }}</label>
+                        <label class="mb-2">{{ __('قيمة المبلغ (*)') }}</label>
                         <input type="number" step="any" class="form-control" autocomplete="off">
                     </div>
                     <div class="form-group mb-3">
-                        <label>{{ __('رقم بطاقة المشترك (*)') }}</label>
+                        <label class="mb-2">{{ __('رقم بطاقة المشترك (*)') }}</label>
                         <input type="text" class="form-control" autocomplete="off">
                     </div>
 
@@ -773,12 +793,13 @@
 <div class="modal fade" id="WithReq" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5" role="document">
         <div class="modal-content p-4">
-            <div class="modal-header d-block">
+            <div class="modal-header px-1">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('طلبات السحب') }}
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-0">
                 <div class="table-responsive">
                     <table class="table text-center">
                         <thead>
@@ -817,18 +838,19 @@
 <div class="modal fade" id="DepositWallet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog p-5" role="document">
         <div class="modal-content p-4">
-            <div class="modal-header d-block">
+            <div class="modal-header px-1">
                 <h1 class="modal-title fw-bold fs-5">
                     {{ __('شحن المحفظة') }}
                 </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="alert alert-danger mb-2 p-2">
+            <div class="modal-body p-0">
+                <div class="alert alert-danger mb-3 p-2">
                     {{ __('سيتم خصم 3%، كرسوم شحن إلكتروني من المبلغ الذي يتم شحنه') }}
                 </div>
                 <form>
                     <div class="form-group mb-3">
-                        <label>{{ __('المبلغ بالدولار (*)') }}</label>
+                        <label class="mb-3">{{ __('المبلغ بالدولار (*)') }}</label>
                         <input type="number" step="any" class="form-control" autocomplete="off"
                             placeholder="{{ __('قيمة السحب') }}">
                     </div>

@@ -4,19 +4,14 @@
 
 @section('content')
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    <img class="d-none d-sm-block position-absolute image-login z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
 <section class="bot-moves">
     <div class="container">
         <div class="card p-5">
-            <h1 class="text-center">{{ __('حركات البوت') }}</h1>
+            <h1 class="text-center">{{ __('حركات البوت') }} (8654)</h1>
             <div class="line m-auto mb-4"></div>
             <div class="table-responsive">
                 <table class="table table-hover text-center bg-fa">

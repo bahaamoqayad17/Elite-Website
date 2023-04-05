@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="739.685" height="1076" viewBox="0 0 739.685 1076">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.591" y1="0.654" x2="0.93" y2="0.575" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009ee3" stop-opacity="0.376"/>
+      <stop offset="0.834" stop-color="#009ee3" stop-opacity="0.859"/>
+      <stop offset="1" stop-color="#009ee3" stop-opacity="0.757"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.488" y1="0.257" x2="1.213" y2="0.567" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009ee3" stop-opacity="0.078"/>
+      <stop offset="1" stop-color="#009ee3" stop-opacity="0.624"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_18316" data-name="Group 18316" transform="translate(-1180.315 0)">
+    <path id="Intersection_5" data-name="Intersection 5" d="M512.228,1075.522H33.433s-57.285-7.387-21.885-46.662,86.081-89.774,133.235-138.017C278.066,752.155,323.93,675.726,252.531,440.376,186.791,223.687,35.3,118.845,36.3,0H738.522c.395.568.77,1.112,1.163,1.682V1075.943c-16.077.04-32.114.057-47.821.057C608.413,1076,534.209,1075.522,512.228,1075.522Z" transform="translate(1180.316 0)" opacity="0.4" fill="url(#linear-gradient)"/>
+    <path id="Intersection_6" data-name="Intersection 6" d="M56.7,719.564C44.582,709.2,35.042,693.713,29.014,671.018-.826,558.663-16.744,526.386,26.925,427.628,95.53,311.035,203.5,243.5,314.9,148.249,390.67,86.039,354.683,30.5,396.92,0V719.564Z" transform="translate(1523.08 356.435)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

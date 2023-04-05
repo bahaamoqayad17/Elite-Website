@@ -18,27 +18,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/ltr.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
         <style>
-            @media (max-width:992px) {
-                nav .nav-item {
-                    margin: 0 !important
-                }
-            }
 
-            .single-blog .card .blog-text,
-            .single-course .card .course-text {
-                border-right: none !important;
-                border-left: 4px solid var(--mainColor);
-            }
-
-            .before::before {
-                margin-right: 10px !important;
-                margin-left: 0 !important
-            }
-
-            footer .other-links {
-                padding-left: 70px;
-                padding-right: 0 !important
-            }
         </style>
     @endif
 
@@ -266,12 +246,12 @@
             </div>
         </div>
     @endif
-    <footer class="text-light pt-5 pb-1">
+    <footer class="text-light pt-4 pb-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="pt-5">
-                        <h4 class="before fw-bold mb-5">{{ __('حمل التطبيق الآن') }}</h4>
+                        <h3 class="before fw-bold mb-4">{{ __('حمل التطبيق الآن') }}</h3>
                         <div>
                             <a href=""><img width="190" class="mb-2"
                                     src="{{ asset('assets/img/google-play-badge.svg') }}"></a>
@@ -282,9 +262,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="pt-5">
-                        <h4 class="before fw-bold mb-4">{{ __('معلومات التواصل') }}</h4>
+                        <h3 class="before fw-bold mb-4">{{ __('معلومات التواصل') }}</h3>
                         <p><img width="23" src="{{ asset('assets/img/location-white.svg') }}"> <span
                                 class="ms-2">{{ __('غزة -شارع الكنز- برج نعمة الطابق السابع') }}</span>
                         </p>
@@ -297,21 +277,23 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="pt-5 other-links">
-                        <h4 class="before fw-bold mb-4">{{ __('صفحات آخرى') }}</h4>
-                        <p class="mb-0 "><a href="{{ route('site.bot_terms') }}">{{ __('شروط البوت') }}</a></p>
-                        <p class="mb-0 "><a
+                        <h3 class="before fw-bold mb-4">{{ __('صفحات أخرى') }}</h3>
+                        <p class="mb-1"><a href="{{ route('site.bot_terms') }}">{{ __('شروط البوت') }}</a></p>
+                        <p class="mb-1"><a
                                 href="{{ route('site.subscribe_course') }}">{{ __('سجل في دوراتنا') }}</a></p>
-                        <p class="mb-0 "><a
+                        <p class="mb-1"><a href="{{ route('site.posts') }}">{{ __('منشوراتنا') }}</a>
+                        </p>
+                        <p class="mb-1"><a
                                 href="{{ route('site.crypto_currencies') }}">{{ __('العملات المحرمة والمباحة') }}</a>
                         </p>
-                        <p class="mb-0 "><a
+                        <p class="mb-1"><a
                                 href="{{ route('site.privacy_policy') }}">{{ __('سياسة الخصوصية') }}</a></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                    <center>
-                        <img width="200" src="{{ asset('assets/img/logo-white.svg') }}">
-                        <div class="icons">
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <div class="position-relative">
+                        <img width="240" src="{{ asset('assets/img/logo-white.svg') }}">
+                        <div class="{{ app()->isLocale('ar') ? 'icons' : 'icons-en' }} position-absolute">
                             <a href="">
                                 <img src="{{ asset('assets/img/twitter.svg') }}" width="37">
                             </a>
@@ -325,20 +307,20 @@
                                 <img src="{{ asset('assets/img/facebook.svg') }}" width="37">
                             </a>
                         </div>
-                    </center>
+                    </div>
                 </div>
-                <div class="hr my-3"></div>
+                <div class="hr my-3 mt-5"></div>
             </div>
             <div class="d-flex justify-content-around w-50 mx-auto my-1 mb-1 links">
-                <a class="fw-bold mb-4" href="{{ route('site.index') }}">{{ __('الرئيسية') }}</a>
+                <a class="fw-bold mb-3" href="{{ route('site.index') }}">{{ __('الرئيسية') }}</a>
                 <span class="d-none d-sm-block">|</span>
-                <a class="fw-bold mb-4" href="{{ route('site.courses') }}">{{ __('دوراتنا') }}</a>
+                <a class="fw-bold mb-3" href="{{ route('site.courses') }}">{{ __('دوراتنا') }}</a>
                 <span class="d-none d-sm-block">|</span>
-                <a class="fw-bold mb-4" href="{{ route('site.blogs') }}">{{ __('مدوناتنا') }}</a>
+                <a class="fw-bold mb-3" href="{{ route('site.blogs') }}">{{ __('مدوناتنا') }}</a>
                 <span class="d-none d-sm-block">|</span>
-                <a class="fw-bold mb-4" href="{{ route('site.subscribe_course') }}">{{ __('سجل في دوراتنا') }}</a>
+                <a class="fw-bold mb-3" href="{{ route('site.subscribe_course') }}">{{ __('سجل في دوراتنا') }}</a>
                 <span class="d-none d-sm-block">|</span>
-                <a class="fw-bold mb-4" href="{{ route('site.contact') }}">{{ __('تواصل معنا') }}</a>
+                <a class="fw-bold mb-3" href="{{ route('site.contact') }}">{{ __('تواصل معنا') }}</a>
             </div>
             <p class="text-center">{{ __('تكنو إليت - جميع الحقوق محفوظة © 2023') }}</p>
         </div>

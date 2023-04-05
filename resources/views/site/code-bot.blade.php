@@ -4,16 +4,11 @@
 
 @section('content')
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    <img class="d-none d-sm-block position-absolute image-login z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
-<section id="forget-password-1" class="forms">
+<section class="forms">
     <div class="container">
         <div class="card p-5 w-60 m-auto">
             <h2 class="text-center fw-bold pb-5 before">{{ __('البوت الخاص بك') }}</h2>

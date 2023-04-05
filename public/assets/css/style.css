@@ -57,6 +57,18 @@ header {
     padding-bottom: 100px;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: none !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #e9ecef !important;
+    opacity: 1;
+}
+
 .button-fill {
     background-color: var(--mainColor) !important;
     color: #fff !important;
@@ -164,21 +176,6 @@ ul.dashed > li:before {
     right: -173px;
 }
 
-.register-image-en {
-    top: -284px;
-    left: -173px;
-}
-
-.blog-image {
-    right: -304px;
-    top: -1122px;
-}
-
-.blog-image-en {
-    left: -76px;
-    top: -852px;
-}
-
 .mb-6 {
     margin-bottom: 6rem !important;
 }
@@ -218,7 +215,7 @@ nav {
 }
 
 .landing-page h1 {
-    font-size: 80px;
+    font-size: 100px;
 }
 
 .landing-page h2 {
@@ -282,10 +279,16 @@ nav {
     border: 2px solid var(--mainColor);
 }
 
-.landing-blogs .box img {
+.landing-blogs .box .blog-image-slider {
     top: 16%;
     right: -37%;
     border: 2px solid var(--mainColor);
+}
+
+.landing-blogs .box .blog-image-slider-en {
+    left: -37%;
+    border: 2px solid var(--mainColor);
+    top: 16%;
 }
 
 .owl-blogs img {
@@ -623,13 +626,9 @@ nav {
 
 /* ------------------------- Start Login ---------------------------- */
 .image-login {
-    right: -449px;
-    top: -307px;
-}
-
-.image-login-en {
-    left: -449px;
-    top: -307px;
+    width: 588.68px;
+    height: 857px;
+    right: -6%;
 }
 /* ------------------------- End Login ---------------------------- */
 
@@ -648,7 +647,7 @@ nav {
 
 .contact-us-section,
 .blogs {
-    padding-top: 200px;
+    padding-top: 200px !important;
 }
 .contact-us-section .card p {
     font-size: 15px;
@@ -719,29 +718,29 @@ nav {
     box-shadow: #3442bb05 1px 1px 20px 20px;
 }
 
-.blogs .pag a:not(.page-active) {
-    color: var(--mainColor) !important;
-    border: none !important;
-}
-
-.blogs .page-active {
-    background-color: var(--mainColor) !important;
-    color: #fff !important;
-}
-
-.blogs .pagination-holder {
-    font-size: 20px;
-    box-shadow: #396abf17 1px 1px 20px 20px;
-}
-
 .blogs .card {
     width: 90%;
+}
+
+.blogs nav {
+    width: 96% !important;
 }
 /* ------------------------- End Blogs ---------------------------- */
 
 /* ------------------------- Start Blog ---------------------------- */
 .single-blog {
     padding-top: 200px;
+}
+
+.single-blog .date span {
+    font-family: "Poppins";
+    font-size: 14px;
+}
+
+.blog-image {
+    width: 1519px;
+    height: 806px;
+    top: -4px;
 }
 
 .single-blog .card p {
@@ -788,7 +787,7 @@ nav {
 }
 
 .faq-header center {
-    margin-top: 120px;
+    margin-top: 70px;
 }
 
 .image-faq {
@@ -879,6 +878,15 @@ nav {
     color: #676767;
 }
 
+.profile-image {
+    right: -12%;
+    width: 45%;
+}
+
+.user-profile {
+    padding-bottom: 50px;
+}
+
 .user-profile .card .user_details .verify:before {
     content: "-----";
     background-color: #eb0f0f;
@@ -892,8 +900,17 @@ nav {
 }
 
 .user-profile .elite-agents {
-    height: 415px;
+    height: 480px;
     overflow-y: scroll;
+}
+
+#BotMoves .modal-dialog {
+    max-width: 850px !important;
+}
+
+#BotMoves .modal-content {
+    padding-left: 150px !important;
+    padding-right: 150px !important;
 }
 
 .card nav .nav-tabs .active {
@@ -915,6 +932,10 @@ nav {
 .user-profile .card .accordion-item {
     position: relative;
     border: none !important;
+}
+
+.modal label {
+    font-family: "Cairo";
 }
 
 .user-profile .card .accordion-button::before {
@@ -960,7 +981,7 @@ nav {
     color: var(--mainColor);
 }
 
-#VerifyUser button {
+#VerifyUser .button-fill {
     width: 165px !important;
 }
 
@@ -1062,6 +1083,11 @@ nav {
     color: #676767;
 }
 
+.notification-image {
+    right: -21%;
+    width: 840px;
+}
+
 /* ------------------------- End Profile ---------------------------- */
 
 /* ------------------------- Start Courses ---------------------------- */
@@ -1070,6 +1096,10 @@ nav {
 .single-course .badge-card {
     width: 100px;
     font-size: 20px;
+}
+
+.contact-us-courses img {
+    width: 640px;
 }
 
 /* ------------------------- End Courses ---------------------------- */
@@ -1158,7 +1188,6 @@ nav {
 .recorded-course .titles {
     box-shadow: 1px 1px 21px 1px rgb(0, 0, 0, 16%);
     border-radius: 15px;
-    min-height: 1400px;
 }
 
 .recorded-course .card {
@@ -1193,10 +1222,19 @@ nav {
     height: 38px;
 }
 
+.terms-image {
+    top: -200px;
+    right: -173px;
+    height: 215%;
+    width: 56%;
+}
+
 /* ------------------------- End Recorded Course ---------------------------- */
 
 /* ------------------------- Start Footer  ---------------------------- */
 footer {
+    display: flex;
+    justify-content: center;
     background-color: var(--mainColor);
 }
 footer .before::before {
@@ -1210,12 +1248,25 @@ footer .hr {
 footer a {
     color: unset !important;
 }
+footer p {
+    font-size: 20px;
+}
 footer .links span {
     opacity: 0.9;
 }
 
-footer .other-links {
-    padding-right: 70px;
+footer .links a {
+    font-size: 18px;
+}
+
+footer .icons {
+    top: 86%;
+    left: 0;
+}
+
+footer .icons-en {
+    top: 86%;
+    right: 0;
 }
 
 .footer-mobile {
@@ -1233,24 +1284,80 @@ footer .other-links {
 /* ------------------------- X Large Screen  ---------------------------- */
 
 @media (min-width: 1600px) {
+    .single-blog {
+        padding-top: 400px;
+    }
+
+    .contact-us-courses {
+        padding-top: 100px !important;
+    }
+
+    .contact-us-courses img {
+        width: 750px;
+    }
+
+    .landing-page {
+        padding-bottom: 0 !important;
+    }
+
+    .landing-page h1 {
+        font-size: 110px;
+    }
+
+    .landing-page .text {
+        margin-top: 110px !important;
+    }
+
+    .terms-image {
+        top: -200px;
+        right: -173px;
+        height: 206%;
+        width: 46%;
+    }
+
+    .profile-image {
+        right: 0;
+        width: 36%;
+    }
+
+    .notification-image {
+        right: -8%;
+        width: 870px;
+        height: 1259px;
+    }
+
+    .elite-clients-section {
+        margin-top: 70px;
+    }
+
+    .recorded-course {
+        padding-top: 370px;
+    }
+
+    .course-header img {
+        width: 65%;
+    }
+
     .image-login {
-        right: -566px;
-        top: -354px;
+        width: 674px;
+        height: 980px;
+        right: 0;
     }
-    .image-login-en {
-        left: -566px;
-        top: -354px;
+
+    .faq-header center {
+        margin-top: 120px;
     }
+
     .owl-number .owl-stage-outer {
         margin-top: 70px;
     }
 
     .landing-page center img {
-        width: 100%;
+        width: 120%;
     }
 
     .landing-page .content {
-        margin-top: 170px !important;
+        margin-top: 120px !important;
     }
 
     .elite-clients .curved::after {
@@ -1279,23 +1386,16 @@ footer .other-links {
 
     .register-image,
     .register-image-en {
-        height: 218%;
-    }
-
-    .courses {
-        margin-top: 200px;
+        height: 215%;
     }
 
     .contact-us-section {
-        margin-top: 200px;
+        margin-top: 240px;
     }
     .blog-image {
-        right: -381px;
-        top: -1404px;
-    }
-    .blog-image-en {
-        left: -95px;
-        top: -1080px;
+        width: 1903px;
+        height: 1008px;
+        top: -4px;
     }
     .subscriptions .orbit li {
         width: 340px !important;
@@ -1306,7 +1406,13 @@ footer .other-links {
         font-size: 20px;
     }
     .blogs {
-        padding-top: 180px !important;
+        padding-top: 170px !important;
+    }
+    .blogs-header img {
+        width: 125%;
+    }
+    .blogs-header {
+        padding-top: 100px !important;
     }
 }
 
@@ -1315,6 +1421,19 @@ footer .other-links {
 /* ------------------------- X Mobile Screen  ---------------------------- */
 
 @media (max-width: 992px) {
+    .blogs {
+        padding: 0 !important;
+    }
+    .blogs nav {
+        width: 100% !important;
+    }
+
+    .posts-section .post .image-logo {
+        transform: translate(-50%, 50%);
+        width: 50%;
+        opacity: 0.07;
+        left: 50%;
+    }
     nav {
         padding: 0 !important;
     }
@@ -1332,6 +1451,21 @@ footer .other-links {
     .last-blogs {
         font-size: 14px;
         max-width: 81%;
+    }
+    footer .icons {
+        top: 72%;
+        transform: translate(-50%, 50%);
+        left: 50%;
+    }
+
+    footer .icons-en {
+        top: 72%;
+        transform: translate(-50%, 50%);
+        left: 50%;
+    }
+
+    .forms {
+        padding-top: 50px !important;
     }
 
     .single-blog .last-blogs {
@@ -1395,13 +1529,9 @@ footer .other-links {
     .headers {
         padding: 0px;
     }
-    .contact-us-section,
-    .blogs {
-        padding-top: 100px !important;
-    }
 
     .headers .headers-text {
-        padding-top: 50px !important;
+        padding-top: 20px !important;
     }
 
     .counts .count {
@@ -1466,10 +1596,26 @@ footer .other-links {
         margin-right: 0 !important;
     }
 
-    .landing-blogs .box img {
-        top: -52%;
+    .landing-blogs .box .blog-image-slider {
+        top: -40%;
         z-index: 5;
         right: 21%;
+    }
+
+    .landing-blogs .box .blog-image-slider-en {
+        top: -40%;
+        z-index: 5;
+        left: 21%;
+    }
+
+    .landing-blogs .box .ms-5 {
+        text-align: center;
+        margin: 0 !important;
+        margin-top: 40px !important;
+    }
+
+    .bot-moves {
+        padding-top: 50px !important;
     }
 
     .landing-blogs .box {
@@ -1487,8 +1633,19 @@ footer .other-links {
         margin-bottom: 0px !important;
     }
 
-    .forms .card {
+    .forms .card,
+    #BotMoves .modal-content {
         width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #BotMoves .modal-dialog {
+        padding: 15px !important;
+    }
+
+    #lang .modal-content {
+        padding: 20px !important;
     }
 
     #add-comment {
@@ -1550,7 +1707,7 @@ footer .other-links {
         margin-top: 30px;
     }
     .elite-clients-section {
-        margin-top: 0;
+        margin-top: 50px;
     }
 
     #req-join .col-6 {
@@ -1577,7 +1734,7 @@ footer .other-links {
     .privacy-policy .card {
         width: 100% !important;
     }
-    footer .other-links {
+    #edit-user {
         padding: 0 !important;
     }
 }

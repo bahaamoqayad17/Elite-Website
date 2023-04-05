@@ -5,11 +5,11 @@
 @section('content')
 
 
-    <header class="course-header">
+    <header class="course-header pt-5 pb-0">
         <div class="container">
             <div class="row justify-content-center">
                 <center class="col-lg-12">
-                    <img width="70%" src="{{ asset('assets/img/courses.svg') }}" />
+                    <img width="45%" src="{{ asset('assets/img/single-course.svg') }}" />
                 </center>
             </div>
         </div>
@@ -92,7 +92,7 @@
                     </article>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <aside class="course-details {{ app()->isLocale('ar') ? 'ms-5' : '' }}">
+                    <aside class="course-details ms-5">
                         <div class="card p-5 border-0 rounded">
                             <h3 class="text-center fw-bold mb-4">{{ __('تفاصيل الدورة') }}</h3>
                             <div class="d-flex bg-fa justify-content-between mb-3 p-2 px-3 rounded">

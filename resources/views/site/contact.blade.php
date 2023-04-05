@@ -4,16 +4,11 @@
 
 @section('content')
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    <img class="d-none d-sm-block position-absolute image-login z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
-<header class="contact-us-header headers">
+<header class="contact-us-header headers pt-5">
     <div class="container align-items-center">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">

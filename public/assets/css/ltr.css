@@ -331,6 +331,71 @@
 .rtl .float-end {
     float: left !important;
 }
+.user-profile .card .accordion-button::before {
+    left: 0;
+}
+
+.landing-page h1 {
+    font-size: 81px !important;
+}
+
+.image-login {
+    width: 588.68px !important;
+    height: 857px !important;
+    left: -6% !important;
+}
+
+.terms-image {
+    left: -173px !important;
+}
+
+.notification-image {
+    left: -21% !important;
+}
+
+.profile-image {
+    left: -12% !important;
+}
+
+.register-image {
+    left: -173px !important;
+}
+
+@media (min-width: 1600px) {
+    .image-login {
+        width: 674px !important;
+        height: 980px !important;
+        left: 0 !important;
+    }
+    .terms-image {
+        left: -173px !important;
+    }
+
+    .notification-image {
+        left: -8% !important;
+    }
+
+    .profile-image {
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    nav .nav-item {
+        margin: 0 !important;
+    }
+}
+
+.single-blog .card .blog-text,
+.single-course .card .course-text {
+    border-right: none !important;
+    border-left: 4px solid var(--mainColor);
+}
+
+.before::before {
+    margin-right: 10px !important;
+    margin-left: 0 !important;
+}
 
 @media screen and (max-width: 1169px) {
     .rtl section.content {

@@ -5,13 +5,8 @@
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute blog-image z-n1" src={{ asset('assets/img/single-blog-header.png') }}
-            width="120%" />
-    @else
-        <img class="d-none d-sm-block position-absolute blog-image-en z-n1"
-            src={{ asset('assets/img/single-blog-header-en.png') }} width="105%" />
-    @endif
+    <img class="d-none d-sm-block position-absolute blog-image z-n1"
+        src={{ asset('assets/img/single-blog-header' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }} />
 @endsection
 
 <header class="single-blog-header headers">
@@ -40,7 +35,12 @@
                             <span class="badge text-bg-warning position-absolute p-3 badge-card">تداول العملات
                                 الرقمية</span>
                         </div>
-                        <span class="text-secondary p-2">10 July,2022</span>
+                        <di class="d-flex flex-row-reverse date align-items-center">
+                            <span class="text-secondary p-2">10:20:12Pm
+                                02-01-2023 </span>
+                            <img class="me-3 mb-1" width="20" src="{{ asset('assets/img/clock.svg') }}">
+
+                        </di>
 
                         <div class="card-text mb-4">
                             <h3 class="fw-bold mb-5">
@@ -214,9 +214,9 @@
         </div>
         <form action="" id="add-comment" method="post">
             <div class="input-group mb-5">
-                <input type="text" class="form-control" id="name" name="name"
+                <input type="text" class="rounded form-control" id="name" name="name"
                     placeholder="{{ __('الاسم') }}" />
-                <input type="text" class="form-control ms-4" id="name" name="name"
+                <input type="text" class="rounded form-control ms-4" id="name" name="name"
                     placeholder="{{ __('البريد الإلكتروني') }}" />
             </div>
             <div class="mb-5">

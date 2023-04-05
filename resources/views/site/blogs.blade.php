@@ -5,23 +5,18 @@
 @section('content')
 
 @section('background-image')
-    @if (app()->isLocale('ar'))
-        <img class="d-none d-sm-block position-absolute image-login z-n1" src="{{ asset('assets/img/login.png') }}"
-            width="70%" />
-    @else
-        <img class="d-none d-sm-block position-absolute image-login-en z-n1" src="{{ asset('assets/img/login-en.png') }}"
-            width="70%">
-    @endif
+    <img class="d-none d-sm-block position-absolute image-login z-n1"
+        src="{{ asset('assets/img/login' . (app()->isLocale('ar') ? '' : '-en') . '.svg') }}" />
 @endsection
 
-<header class="blogs-header headers">
+<header class="blogs-header headers pt-5">
     <div class="container align-items-center">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="headers-text">
                     <h1 class="fw-bold">{{ __('مدوناتنا') }}</h1>
                     <p>
-                        لديك أي استفسار أو مشكلة ؟ لا تتردد في التواصل معنا
+                        هنا يتم توليد النص و عشوائي و هيك اشي
                     </p>
                 </div>
             </div>
@@ -32,7 +27,7 @@
     </div>
 </header>
 
-<section class="blogs pt-0">
+<section class="blogs pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-md-10">
@@ -53,8 +48,8 @@
                                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
                                     توليد هذا النص من مولد النص العربى
                                 </p>
-                                <a href="{{ route('site.blog', 1) }}" class="btn button-notfill float-end rounded">اقرأ
-                                    المزيد</a>
+                                <a href="{{ route('site.blog', 1) }}" class="btn button-notfill float-end rounded">
+                                    {{ __('اقرأ المزيد') }}</a>
                             </div>
                         </div>
                     </div>
@@ -169,6 +164,23 @@
                         </div>
                     </div>
                 </div>
+                <nav aria-label="Page navigation example" class="m-0">
+                    <ul class="pagination float-end">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
                 <div class="container">
@@ -227,42 +239,6 @@
                             </div>
                     </aside>
                 </div>
-            </div>
-
-            <div class="pagination-holder rounded-4 d-none d-sm-flex justify-content-center fw-bold w-100">
-                <nav class="pag mt-3 mx-0" aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                @if (app()->isLocale('ar'))
-                                    <span aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-                                @else
-                                    <span aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
-                                @endif
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link page-active" href="#">10</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">...</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                @if (app()->isLocale('ar'))
-                                    <span aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
-                                @else
-                                    <span aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-                                @endif
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
