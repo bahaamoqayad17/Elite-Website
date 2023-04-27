@@ -361,11 +361,18 @@
     left: -173px !important;
 }
 
+.plans-image {
+    left: -16% !important;
+}
+
 @media (min-width: 1600px) {
     .image-login {
         width: 674px !important;
         height: 980px !important;
         left: 0 !important;
+    }
+    .plans-image {
+        left: -3% !important;
     }
     .terms-image {
         left: -173px !important;

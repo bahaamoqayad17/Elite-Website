@@ -31,6 +31,11 @@ class SiteController extends Controller
         return view('site.blog');
     }
 
+    public function plan($id)
+    {
+        return view('site.plan');
+    }
+
     public function courses()
     {
         return view('site.courses');
@@ -114,5 +119,10 @@ class SiteController extends Controller
     public function crypto_currencies()
     {
         return view('site.crypto-currencies');
+    }
+
+    public function plans()
+    {
+        return view('site.plans');
     }
 }

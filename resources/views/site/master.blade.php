@@ -68,7 +68,7 @@
                     </li>
                 </ul>
 
-                @if (Auth::user())
+                @if (!Auth::user())
                     <div class="d-flex align-items-center flex-row-reverse">
                         <a href="{{ route('site.profile') }}">
                             <div class="user-avatar mt-2 me-2"></div>

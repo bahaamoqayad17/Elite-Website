@@ -346,7 +346,9 @@ nav {
     box-shadow: 1px 1px 20px 20px #396abf1f;
 }
 
-.subscriptions .orbit .box .ball {
+.subscriptions .orbit .box .ball,
+.plans .card .ball,
+.single-plan-section .card .ball {
     background-color: #7dcbef30;
     width: 50px;
     height: 50px;
@@ -1090,6 +1092,48 @@ nav {
 
 /* ------------------------- End Profile ---------------------------- */
 
+/* ------------------------- Start Plans ---------------------------- */
+
+.plans .plan {
+    padding-left: 90px !important;
+    padding-right: 90px !important;
+}
+
+.plans .card .plan p,
+.single-plan-section .card p {
+    font-size: 20px;
+    color: #676767;
+}
+
+.plans .card .plan .position-relative {
+    width: 380px;
+}
+
+.plans .card .plan .button-fill {
+    width: 220px;
+}
+
+.plans-image {
+    top: -5%;
+    right: -16%;
+}
+
+.single-plan-section .card .button-fill {
+    width: 550px;
+}
+
+.single-plan-section .card .plan-content {
+    width: 550px;
+    margin: auto;
+}
+
+.single-plan-section .card hr {
+    color: #bdbaba;
+    height: 1px;
+}
+
+/* ------------------------- End Plans ---------------------------- */
+
 /* ------------------------- Start Courses ---------------------------- */
 
 .courses .badge-card,
@@ -1288,6 +1332,11 @@ footer .icons-en {
         padding-top: 400px;
     }
 
+    .plans-image {
+        top: -7%;
+        right: -3%;
+    }
+
     .contact-us-courses {
         padding-top: 100px !important;
     }
@@ -1428,6 +1477,31 @@ footer .icons-en {
         width: 100% !important;
     }
 
+    .single-plan-section .card .button-fill {
+        width: 286px;
+    }
+
+    .single-plan-section .card .plan-content {
+        width: 550px;
+        margin: auto;
+    }
+
+    .single-plan-section .card hr,
+    .single-plan-section .card .title {
+        margin-bottom: 20px !important;
+    }
+    .plans .card .plan {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .plans .card .plan .position-relative {
+        width: 100%;
+    }
+
+    .plans .card .plan .position-relative .d-flex {
+        margin-bottom: 15px;
+    }
+
     .posts-section .post .image-logo {
         transform: translate(-50%, 50%);
         width: 50%;
@@ -1482,8 +1556,10 @@ footer .icons-en {
     .courses,
     .course-header,
     .single-course,
-    .posts-section {
-        padding-top: 30px !important;
+    .posts-section,
+    .plans,
+    .single-plan-section {
+        padding-top: 40px !important;
     }
     .blogs-header .headers-text {
         padding-top: 70px;
@@ -1634,7 +1710,10 @@ footer .icons-en {
     }
 
     .forms .card,
-    #BotMoves .modal-content {
+    #BotMoves .modal-content,
+    .plans .card,
+    .single-plan-section .card,
+    .single-plan-section .card .plan-content {
         width: 100% !important;
         padding-left: 20px !important;
         padding-right: 20px !important;

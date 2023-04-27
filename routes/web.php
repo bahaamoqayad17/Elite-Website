@@ -29,6 +29,8 @@ Route::name('site.')->group(function () {
     Route::get('/notification', [SiteController::class, 'notification'])->name('notification');
     Route::get('/clients', [SiteController::class, 'clients'])->name('clients');
     Route::get('/posts', [SiteController::class, 'posts'])->name('posts');
+    Route::get('/plan/{id}', [SiteController::class, 'plan'])->name('plan');
+    Route::get('/plans', [SiteController::class, 'plans'])->name('plans');
     Route::get('/subscribe-course', [SiteController::class, 'subscribe_course'])->name('subscribe_course');
     Route::get('/recorded-course', [SiteController::class, 'recorded_course'])->name('recorded_course');
     Route::get('/privacy-policy', [SiteController::class, 'privacy_policy'])->name('privacy_policy');
